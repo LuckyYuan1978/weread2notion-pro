@@ -46,7 +46,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: weread book sync
-        run: python -u weread2notionpro/book.py
+        run: python -u weread2notionpro/book.py > debug.txt
+      - name: Upload debug output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-logs
+          path: debug.txt 
       - name: weread sync
         run: |
           weread
