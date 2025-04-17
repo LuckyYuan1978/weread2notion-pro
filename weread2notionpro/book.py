@@ -97,6 +97,8 @@ def insert_book_to_notion(books, index, bookId):
             icon=utils.get_icon(cover),
         )
     page_id = result.get("id")
+    print("书籍阅读详情...")
+    print(book.get("readDetail"))
     if book.get("readDetail") and book.get("readDetail").get("data"):
         data = book.get("readDetail").get("data")
         data = {item.get("readDate"): item.get("readTime") for item in data}
