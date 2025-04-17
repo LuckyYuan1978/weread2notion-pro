@@ -80,7 +80,7 @@ def insert_book_to_notion(books, index, bookId):
         )
 
     print(
-        f"正在插入《{book.get('title')}》,一共{len(books)}本，当前是第{index+1}本。"
+        f"正在插入《{book.get('title')}》,一共{len(books)}本，当前是第{index+1}本呢。"
     )
     parent = {"database_id": notion_helper.book_database_id, "type": "database_id"}
     result = None
