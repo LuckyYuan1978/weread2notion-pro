@@ -158,6 +158,7 @@ notion_books = {}
 
 
 def main():
+    print("开始....")
     global notion_books
     global archive_dict
     bookshelf_books = weread_api.get_bookshelf()
